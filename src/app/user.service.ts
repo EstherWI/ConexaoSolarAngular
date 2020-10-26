@@ -24,4 +24,16 @@ export class UserService {
   public GetAll (){
     return this.http.get<Array<any>>(this.Uri);
   }
+
+  public Create(usuario:any){
+
+    usuario._id = this.nextUserId;
+    let data = {
+      "_id" : usuario._id,
+      "name" : usuario.name,
+      "email" : usuario.email,
+      "senha" : usuario.senha
+    }
+    return this.http.post(this.Uri, JSON.stringify(data));
+  }
 }
