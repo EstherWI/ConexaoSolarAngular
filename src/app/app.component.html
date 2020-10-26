@@ -302,13 +302,13 @@
     </li>
   </ul>
   <div class="row">
-    <div class="col-md-12" *ngIf="users">
+    <div class="col-md-12" *ngIf="usuarios">
         <h3>Lista de Usuários</h3>
         <table class="table">
           <th>Nome</th>
           <th>Email</th>
           <th>Senha</th>
-          <tr *ngFor="let users of users">
+          <tr *ngFor="let usuario of usuarios">
             <td>{{usuario.name}}</td>
             <td>{{usuario.email}}</td>
             <td>{{usuario.senha}}</td>
