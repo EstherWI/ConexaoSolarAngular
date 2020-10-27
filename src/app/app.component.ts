@@ -33,6 +33,13 @@ export class AppComponent {
       this.service.Create(form.value)
       .subscribe((resp)=> {
         console.log(resp);
+        if(resp["status"]== 201){
+          this.service.GetAll()
+            .subscribe((data)=>this.usuarios=data);
+        }
+        else{
+          alert(`Já existe uma conta com este email. Insira outro por favor.`);
+        }
       });
     }
   }

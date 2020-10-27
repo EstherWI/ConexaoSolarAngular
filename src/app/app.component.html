@@ -312,15 +312,15 @@
       <form method="post" #form="ngForm" (ngSubmit)="onSubmit(form)">
         <div class="form-group">
            <label for="name">Nome:</label>
-           <input type="text" name="name" id="name" class="form-control" placeholder="Informe seu nome" [(ngModel)]="service.selectedUser.name"/>
+           <input type="text" name="name" id="name" class="form-control" placeholder="Informe seu nome" [(ngModel)]="service.selectedUser.name" required/>
         </div>
         <div class="form-group">
           <label for="email">Email:</label>
-          <input type="text" name="email" id="email" class="form-control" placeholder="Informe seu email" [(ngModel)]="service.selectedUser.email"/>
+          <input type="text" name="email" id="email" class="form-control" placeholder="Informe seu email" [(ngModel)]="service.selectedUser.email"required/>
         </div>
         <div class="form-group">
           <label for="senha">Senha:</label>
-          <input type="text" name="senha" id="senha" class="form-control" placeholder="Crie sua senha" [(ngModel)]="service.selectedUser.senha"/>
+          <input type="text" name="senha" id="senha" class="form-control" placeholder="Crie sua senha" [(ngModel)]="service.selectedUser.senha"required/>
         </div>
 
         <div class="form-row">
@@ -343,10 +343,12 @@
           <th>Nome</th>
           <th>Email</th>
           <th>Senha</th>
+          <th>Editar</th>
           <tr *ngFor="let usuario of usuarios">
             <td>{{usuario.name}}</td>
             <td>{{usuario.email}}</td>
             <td>{{usuario.senha}}</td>
+            <td class="text-center"><button type="button" class="btn-block btn-sm btn-info"><i class="fas fa-user-edit"></i></button></td>
           </tr>
         </table>
     </div>
