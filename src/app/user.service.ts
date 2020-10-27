@@ -25,6 +25,10 @@ export class UserService {
     return this.http.get<Array<any>>(this.Uri);
   }
 
+  public GetByID(id: string){
+    return this.http.get('${this.Uri}/${id}');
+
+  }
   public Create(usuario:any){
 
     let data = {
