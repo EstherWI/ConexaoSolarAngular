@@ -27,9 +27,7 @@ export class UserService {
 
   public Create(usuario:any){
 
-    usuario._id = this.nextUserId;
     let data = {
-      "_id" : usuario._id,
       "name" : usuario.name,
       "email" : usuario.email,
       "senha" : usuario.senha

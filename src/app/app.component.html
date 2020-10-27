@@ -294,10 +294,13 @@
     <nav>
       <ul class="nav justify-content-end">
         <li class="nav-item">
-          <a class="nav-link active" href="#">Usuários</a>
+          <a class="nav-link active" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Cadastrar Novo Usuário</a>
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Contact</a>
         </li>
       </ul>
     </nav>
@@ -307,7 +310,6 @@
     <div class="col-md-12">
       <h3>Cadastrar Usuário</h3>
       <form method="post" #form="ngForm" (ngSubmit)="onSubmit(form)">
-        <input type="hidden" name="_id" [(ngModel)]="service.selectedUser._id"/>
         <div class="form-group">
            <label for="name">Nome:</label>
            <input type="text" name="name" id="name" class="form-control" placeholder="Informe seu nome" [(ngModel)]="service.selectedUser.name"/>

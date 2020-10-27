@@ -19,7 +19,6 @@ export class AppComponent {
      });
 
      this.service.selectedUser = {
-       "id": null,
        "name": '',
        "email": '',
        "senha": ''
